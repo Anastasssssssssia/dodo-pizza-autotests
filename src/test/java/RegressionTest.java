@@ -12,7 +12,6 @@ public class RegressionTest {
 
             page.navigate("https://dodopizza.ru");
 
-            // ТВОЙ КОД:
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Москва")).first().click();
             page.locator("a").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Пиццы$"))).click();
             page.locator("#guzhy").getByTestId("menu__meta-product_11ee788f97bb5f983f3aede9318dff30").getByTestId("product__button").click();
