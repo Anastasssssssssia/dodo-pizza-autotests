@@ -2,8 +2,11 @@ import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.AriaRole;
 import java.util.regex.Pattern;
 
+import org.junit.jupiter.api.Test;
+
 public class RegressionTest {
-    public static void main(String[] args) {
+    @Test
+    public void regressionTest() {
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                     .setHeadless(false));
